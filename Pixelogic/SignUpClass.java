@@ -51,6 +51,7 @@ public class SignUpClass extends baseClass {
 		
 	Map<String, Response> testCasesResponses = new HashMap<String, Response>();
 
+	//locate elements before each test cases
 	@BeforeMethod
 	public void findElements ()
 	{			
@@ -73,7 +74,7 @@ public class SignUpClass extends baseClass {
 
 		signUpButton = driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[8]/button"));
 	}
-	
+	//validates successful sign up
 	@Test(priority = 1)
 	public void signUpSuccessfully ()
 	{
@@ -140,6 +141,7 @@ public class SignUpClass extends baseClass {
 							
 	}
 	
+	//validates successful login
 	@Test(priority = 2)
 	public void loginSuccessfully ()
 	{
@@ -202,6 +204,7 @@ public class SignUpClass extends baseClass {
 		logout.click();
 	}
 
+	//validate that user cannot register twice with same email
 	@Test(priority = 3)
 	public void registeringWithUsedEmailAssertion ()
 	{
@@ -252,6 +255,7 @@ public class SignUpClass extends baseClass {
 		testCasesResponses.put("registeringWithUsedEmailAssertion", response);	
 	}
 	
+	//validate that user can't register with email that does not contain @
 	@Test(priority = 4)
 	public void registerWithInvalidEmailAddress ()
 	{
@@ -304,6 +308,8 @@ public class SignUpClass extends baseClass {
 		testCasesResponses.put("registerWithInvalidEmailAddress", response);	
 
 	}
+	
+	//validate that user cannot register with email that does not contain com 
 	
 	@Test(priority = 5)
 	public void registerWithInvalidEmailAddressWithoutcom ()
@@ -358,6 +364,7 @@ public class SignUpClass extends baseClass {
 
 	}
 	
+	//validate that user cannot register if first name starts with small letter 
 	@Test(priority = 6)
 	public void smallLetterInFirstNameAssertion ()
 	{
@@ -387,6 +394,7 @@ public class SignUpClass extends baseClass {
 		
 	}
 	
+	//validate that user cannot register if last name starts with small letter
 	@Test(priority = 7)
 	public void smallLetterInLastNameAssertion ()
 	{
@@ -416,6 +424,7 @@ public class SignUpClass extends baseClass {
 		
 	}
 	
+	//validate that user cannot register with same name in first name and last name 
 	@Test(priority = 8)
 	public void firstNameEqualLastNameAssertion ()
 	{
@@ -445,6 +454,7 @@ public class SignUpClass extends baseClass {
 		
 	}
 
+	//validate that mobile number cannot contain letters and special characters
 	@Test(priority = 9)
 	public void InvalidMobileNumberAssertion ()
 	{
@@ -474,6 +484,7 @@ public class SignUpClass extends baseClass {
 
 	}
 	
+	//validate that an alert appears when password is less than 6 characters 
 	@Test(priority = 10)
 	public void invalidPasswordLessthanSixCharacters ()
 	{
@@ -527,6 +538,7 @@ public class SignUpClass extends baseClass {
 
 	}
 	
+	//validate that password must contain at least one capital case letter and one small letter and one number
 	@Test(priority = 10)
 	public void PasswordValidation ()
 	{
@@ -557,6 +569,7 @@ public class SignUpClass extends baseClass {
 		assertTrue(textPattern.matcher(passwordString).matches() && passwordString.length()<9);
 	}
 	
+	//close the browser when done with test cases 
 	@AfterClass
 	public void tearDown()
 	{
