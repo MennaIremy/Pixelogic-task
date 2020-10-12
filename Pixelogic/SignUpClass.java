@@ -103,9 +103,9 @@ public class SignUpClass extends baseClass {
 		
 		signUpButton.click();
 		
-	    WebDriverWait wait = new WebDriverWait(driver, 40);
+	    	WebDriverWait wait = new WebDriverWait(driver, 40);
 	    
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/div[1]/div/div/div[1]/div/div[1]/img")));
+        	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/div[1]/div/div/div[1]/div/div[1]/img")));
 	
 		URI = driver.getCurrentUrl();
 				
@@ -232,13 +232,13 @@ public class SignUpClass extends baseClass {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 40);
 	    
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div")));
+        	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div")));
         
-        WebElement alert = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div"));
+        	WebElement alert = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div"));
 		
-        assertEquals("Email Already Exists.", alert.getText() );
+        	assertEquals("Email Already Exists.", alert.getText() );
         
-        URI = driver.getCurrentUrl();
+        	URI = driver.getCurrentUrl();
 		
 		assertEquals(URI, "https://www.phptravels.net/register");
 		
@@ -285,13 +285,13 @@ public class SignUpClass extends baseClass {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 40);
 	    
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div")));
+       		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div")));
         
-        WebElement alert = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div"));
+        	WebElement alert = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div"));
 		
-        assertEquals("The Email field must contain a valid email address.", alert.getText() );
+        	assertEquals("The Email field must contain a valid email address.", alert.getText() );
         
-        URI = driver.getCurrentUrl();
+        	URI = driver.getCurrentUrl();
 		
 		assertEquals(URI, "https://www.phptravels.net/register");
 		
@@ -340,13 +340,13 @@ public class SignUpClass extends baseClass {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 40);
 	    
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div")));
+        	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div")));
         
-        WebElement alert = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div"));
+        	WebElement alert = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div"));
 		
-        assertEquals("The Email field must contain a valid email address.", alert.getText() );
+        	assertEquals("The Email field must contain a valid email address.", alert.getText() );
         
-        URI = driver.getCurrentUrl();
+        	URI = driver.getCurrentUrl();
 		
 		assertEquals(URI, "https://www.phptravels.net/register");
 		
@@ -514,13 +514,13 @@ public class SignUpClass extends baseClass {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 40);
 	    
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div")));
+        	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div")));
         
-        WebElement alert = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div"));
+        	WebElement alert = driver.findElement(By.xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[2]/div"));
 		
-        assertEquals("The Password field must be at least 6 characters in length.", alert.getText() );
+        	assertEquals("The Password field must be at least 6 characters in length.", alert.getText() );
         
-        URI = driver.getCurrentUrl();
+        	URI = driver.getCurrentUrl();
 		
 		assertEquals(URI, "https://www.phptravels.net/register");
 		
