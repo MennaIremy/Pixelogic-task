@@ -1,6 +1,3 @@
-# Pixelogic-task
-automation task requested by pixelogic 
-
 Setting up the project:
 
   Driver used:
